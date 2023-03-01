@@ -1,3 +1,0 @@
-export enum ProductType{
-  CPU,MOTHERBOARD,MEMORY,STORAGE,VIDEOCARD,CASE
-}
