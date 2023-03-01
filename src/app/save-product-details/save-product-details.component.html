@@ -1,0 +1,72 @@
+<br>
+<br>
+<div fxLayout="row wrap">
+  <div fxFlex="10%"></div>
+
+  <div fxFlex="80%" class="form-container">
+    <h1 class="mat-h1">Add Product Metadata</h1>
+
+    <form [formGroup]="saveProductDetailsForm">
+      <div>
+        <mat-form-field [style.width.px]=327>
+          <mat-label>Name</mat-label>
+          <input matInput [formControl]="name" required >
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field [style.width.px]=327>
+          <mat-label>Brand</mat-label>
+          <input matInput [formControl]="brand" required>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field [style.width.px]=327>
+          <mat-label>Description</mat-label>
+          <textarea matInput [formControl]="description" required></textarea>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field [style.width.px]=327>
+          <mat-label>Product Type</mat-label>
+          <mat-select [formControl]="productType" required>
+            <mat-option value="CPU">CPU</mat-option>
+            <mat-option value="MEMORY">MEMORY</mat-option>
+            <mat-option value="VIDEOCARD">VIDEOCARD</mat-option>
+            <mat-option value="STORAGE">STORAGE</mat-option>
+            <mat-option value="MOTHERBOARD">MOTHERBOARD</mat-option>
+            <mat-option value="CASE">CASE</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field [style.width.px]=327>
+          <mat-label>Price</mat-label>
+          <input matInput [formControl]="price" required>
+        </mat-form-field>
+      </div>
+      <div>
+        <div>
+        <mat-label>Product Picture</mat-label>
+        </div>
+        <mat-icon matSuffix>attach_file</mat-icon>
+        <input type="file" id="inputGroupFile01" (change)="onFileSelected($event)">
+          <br>
+          <br>
+          <div *ngIf="fileSelected">
+            <div>
+              <p>Selected File: {{selectedFileName}}</p>
+            </div>
+            <hr>
+          </div>
+          <br>
+
+      </div>
+      <div>
+        <button type="submit" mat-raised-button color="primary" (click)="saveProduct()">Save</button>
+      </div>
+
+    </form>
+  </div>
+
+  <div fxFlex="10%"></div>
+</div>

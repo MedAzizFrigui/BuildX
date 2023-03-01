@@ -1,0 +1,43 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-button--large {
+  font-size: 20px; /* or any other size you prefer */
+  padding: 7px 32px; /* or any other padding you prefer */
+}
+.mat-button-hover {
+  cursor: pointer;
+  color: yellow;
+}
+.mat-toolbar {
+  margin-bottom: 0;
+}
+p{
+  margin-bottom: 0;
+}
+
+.nav-color-first{
+  background-color: #02021f;
+  color: white;
+}
+
+.X-color{
+  color: white;
+}
+.nav-color-second{
+  background-color: #080842;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+.button-container button:hover {
+  color: yellow;
+}
+
+.example-icon:not(:first-child) {
+  margin-left: 10px;
+  float: right!important;
+}
